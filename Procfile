@@ -1,3 +1,3 @@
 release:python manage.py migrate
-web: gunicorn chat.wsgi --log-file=-
+web: gunicorn videochat.wsgi --log-file=-
 
