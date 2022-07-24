@@ -1,4 +1,4 @@
-const AgoraRTC_N = require("../assets/AgoraRTC_N")
+const AgoraRTC_N = Request("../assets/AgoraRTC_N")
 
 const APP_ID = '5d111459f8184c65a10775d9aae86a04'
 const TOKEN = sessionStorage.getItem('token')
