@@ -1,3 +1,6 @@
+import AgoraRTC_N from '../assets/AgoraRTC_N-4.8.1'
+
+const Agora = AgoraRTC_N
 
 const APP_ID = '5d111459f8184c65a10775d9aae86a04'
 const TOKEN = sessionStorage.getItem('token')
@@ -6,7 +9,7 @@ let UID = sessionStorage.getItem('UID')
 
 let NAME = sessionStorage.getItem('name')
 
-const client = AgoraRTC.createClient({mode:'rtc', codec:'vp8'})
+const client = Agora.createClient({mode:'rtc', codec:'vp8'})
 
 let localTracks = []
 let remoteUsers = {}
