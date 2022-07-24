@@ -36,14 +36,15 @@ def getToken(request):
 
 @csrf_exempt
 def createMember(request):
-    data = json.loads(request.body)
-    member, created = RoomMember.objects.get_or_create(
-        name=data['name'],
-        uid=data['UID'],
-        room_name=data['room_name']
-    )
+    # data = json.loads(request.body)
+    # member, created = RoomMember.objects.get_or_create(
+    #     name=member,
+    #     uid=data['UID'],
+    #     room_name=data['room-name']
+    # )
 
-    return JsonResponse({'name':data['name']}, safe=False)
+    # return JsonResponse({'name':data['name']}, safe=False)
+    return JsonResponse('Page huli',safe=False)
 
 
 def getMember(request):
@@ -63,6 +64,6 @@ def deleteMember(request):
         name=data['name'],
         uid=data['UID'],
         room_name=data['room_name']
-    )
+    )   
     member.delete()
     return JsonResponse('Member deleted', safe=False)

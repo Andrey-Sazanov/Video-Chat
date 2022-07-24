@@ -107,7 +107,6 @@ let createMember = async () => {
     let response = await fetch('/create_member/', {
         method:'POST',
         headers: {
-            'Accept': 'application/json, text/plain, */*' ,
             'Content-Type':'application/json'
         },
         body:JSON.stringify({'name':NAME, 'room_name':CHANNEL, 'UID':UID})
@@ -127,7 +126,6 @@ let deleteMember = async () => {
     let response = await fetch('/delete_member/', {
         method:'POST',
         headers: {
-            'Accept': 'application/json, text/plain, */*' ,
             'Content-Type':'application/json'
         },
         body:JSON.stringify({'name':NAME, 'room_name':CHANNEL, 'UID':UID})
