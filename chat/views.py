@@ -38,12 +38,7 @@ def getToken(request):
 def createMember(request):
     data = json.loads(request.body)
     name = data['name']
-    user,created = RoomMember.objects.get_or_create(
-        name=data['name'],
-        uid=data['UID'],
-        room_name=data['room_name']
-    )
-    return JsonResponse({'name':name}, safe=False)
+    return JsonResponse({'name':name},safe=False)
 
 
 def getMember(request):
